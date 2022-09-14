@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALALAS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="main.js">
+    <link rel="stylesheet" href="/fontawesome-free-6.1.0-web/fontawesome-free-6.1.0-web/css/all.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+</head>
+<body>
+    <!--Header-->
+    <div class="nav">
+        <div class="nav-bar" style="width: 100%;">
+            <div class="nav-bar_item">
+                <a id="order" class="nav-bar_item-link" href="#">
+                    <i class="nav-bar-icon fa-solid fa-box"></i>
+                    Tra cứu đơn hàng
+                </a>
+                <a id="location" class="nav-bar_item-link" href="#">
+                    <i class="nav-bar-icon fa-solid fa-location-dot"></i>
+                    Tìm cửa hàng
+                </a>
+                <a class="hover-ex" href="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="nav-bar-icon fa-solid fa-heart"></i>
+                    Yêu thích
+                </a>
+                <div class="nav-bar_item-link" style="cursor: pointer;" onclick="h_open()">
+                    <i class="nav-bar-icon fa-solid fa-user"></i>
+                    Đăng nhập
+                </div>
+                <a id="bag" class="nav-bar_item-link" href="">
+                    <i class="nav-bar-icon fa-solid fa-bag-shopping"></i>
+                    Giỏ hàng
+                </a>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                       <input type="checkbox" id="checkbox" />
+                       <div class="slider round"></div>
+                    </label>
+                 </div>
+            </div>
+        </div>
+        <!--LOG IN -->
+    <div class="nav-log" style="width: 600px; height: 300px;" id="mySideBar">
+        <div class="nav-log-header">
+            <h3 class="nav-log-name">ALALAS <p class="tag-name">DiscoverYOU</p></h3>
+            <a href="" class="nav-log-out" onclick="h_close()">
+                <i class="nav-log-icon fa-solid fa-xmark"></i>
+            </a>
+        </div>
+        <form action="">
+            <input class="nav-log_input" type="text" name="" placeholder="Email/SDT">
+            <input class="nav-log_input" type="password" name="" placeholder="Mat Khau">
+            <button class="btn" onclick="h_close()">
+                Đăng nhập
+            </button>
+            <div class="registration">
+                <a class="registration-link" href="">Đăng Ký</a>
+                <a class="registration-link" href="">Bạn quên mật khẩu?</a>
+            </div>
+        </form>
+    </div>
+    <div class="header">
+        <img class="header-logo" src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/Logo_Ananas_Header.svg" alt="">
+        <div class = "product-main">
+            <a class="header-item" href="#">
+                Sản Phẩm
+                <i class="header-icon fa-solid fa-angles-down"></i>
+            </a>
+            <div class="product-chose">
+                <div class="product-chose_item">
+                    <a class="product-chose_item-link" href="#">New</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Best Seller</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Outlet Sale</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Restock</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="boder-line"></div>
+        <div class="product-main-man">
+            <a class="header-item" href="#">
+                Nam
+                <i class="header-icon fa-solid fa-angles-down"></i>
+            </a>
+            <div class ="product-man_item">
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Basas</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Vintas</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Urbas</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Pattas</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Creas</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Track 6</a>
+                </div>
+            </div>
+        </div>
+        <div class="boder-line"></div>
+        <div class="product-main-women">
+            <a class="header-item" href="#">
+                Nữ
+                <i class="header-icon fa-solid fa-angles-down"></i>
+            </a>
+            <div class ="product-women_item">
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Basas</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Vintas</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Urbas</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Pattas</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Creas</a>
+                </div>
+                <div class="boder-dashed"></div>
+                <div class ="product-chose_item">
+                    <a class="product-chose_item-link" href="#">Track 6</a>
+                </div>
+            </div>
+        </div>
+        <div class="boder-line"></div>
+        <a class="header-item" href="#">
+            Sale Off
+            <i class="header-icon fa-solid fa-angles-down"></i>
+        </a>
+        <div class="boder-line"></div>
+        <input class="header-input" type="text" placeholder="Search">
+    </div>
+    <div class="nav-bar">
+        <p class="title-endow">Giày không chỉ để mang, bảo vệ chân mà mỗi đôi giày còn mang một câu chuyện, ý nghĩa của riêng nó </p>
+    </div>
+    </div>
+    <!--Content-->
+    <div class="content">
+        <!--LEFT-->
+        <div class="content-left">
+           <div class="content-left_item">
+               <a class="content-left_option" href="#">Tất Cả</a>
+               <div class="boder-line"></div>
+               <a class="content-left_option" href="#">Nam</a>
+               <div class="boder-line"></div>
+               <a class="content-left_option" href="#">Nữ</a>
+           </div>
+           <div class="boder-width"></div>
+           <div class="content-left_list-main">
+               <div>
+                   <ul class="content-left_list-items">
+                       <a  class="content-left_list-item" href="">
+                           <li class="list">Accessories | Phụ Kiện</li>
+                       </a>
+                       <a class="content-left_list-item" href="">
+                            <li class="list">Footwear | Lên Chân</li>
+                       </a>
+                       <a  class="content-left_list-item" href="">
+                            <li class="list">Top | Nửa Trên</li>
+                       </a>
+                   </ul>
+               </div>
+           </div>
+           <div class="boder-width"></div>
+           <div class="content-left_item" onclick="c_open()">
+               <a id="cl-text" class="content-left_option">
+                   Trạng Thái
+                   <i id="cc" class="content-left_icon fa-solid fa-angle-up"></i>
+                </a>
+           </div>
+           <div class="boder-dashed"></div>
+           <div class="content-left_list my-Chose" style="display:none">
+                <div>
+                    <ul class="content-left_list-items">
+                        <a  class="content-left_list-item" href="">
+                            <li class="list">Online Only</li>
+                        </a>
+                        <a class="content-left_list-item" href="">
+                            <li class="list">Best Seller</li>
+                        </a>
+                        <a  class="content-left_list-item" href="">
+                            <li class="list">New Arrival</li>
+                        </a>
+                        <a  class="content-left_list-item" href="">
+                            <li class="list">Limited Edition</li>
+                        </a>
+                        <a  class="content-left_list-item" href="">
+                            <li class="list">Sale Off</li>
+                        </a>
+                    </ul>
+                </div>
+           </div>
+           <div class="boder-dashed"></div>
+           <div id="c2" class="content-left_item">
+            <a id="cl-text2" class="content-left_option" >
+                Kiểu Dáng
+                <i id="cl" class="content-left_icon fa-solid fa-angle-up"></i>
+             </a>
+            </div>
+            <div class="boder-dashed"></div>
+            <div class="content-left_list my-Chose2" style="display:none">
+             <div>
+                 <ul class="content-left_list-items">
+                     <a  class="content-left_list-item" href="">
+                         <li class="list">Low Top</li>
+                     </a>
+                     <a class="content-left_list-item" href="">
+                         <li class="list">High Top</li>
+                     </a>
+                     <a  class="content-left_list-item" href="">
+                         <li class="list">Mule</li>
+                     </a>
+                     <a  class="content-left_list-item" href="">
+                        <li class="list">Slip-on</li>
+                    </a>
+                 </ul>
+             </div>
+            </div>
+            <div class="boder-dashed"></div>
+            <div id="c3" class="content-left_item">
+                <a id="cl-text3" class="content-left_option" >
+                    Giá
+                    <i id="cc3" class="content-left_icon fa-solid fa-angle-up"></i>
+                 </a>
+            </div>
+            <div class="boder-dashed"></div>
+            <div class="content-left_list my-Chose3" style="display:none">
+                <div>
+                    <ul class="content-left_list-items">
+                        <a  class="content-left_list-item" href="">
+                            <li class="list">350k - 500k</li>
+                        </a>
+                        <a class="content-left_list-item" href="">
+                            <li class="list">500k - 999k</li>
+                        </a>
+                        <a  class="content-left_list-item" href="">
+                            <li class="list">1tr-></li>
+                        </a>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="boder-dashed"></div>
+            <div id="c4" class="content-left_item">
+                <a id="cl-text4" class="content-left_option" >
+                    SIZE
+                    <i id="cc4" class="content-left_icon fa-solid fa-angle-up"></i>
+                 </a>
+            </div>
+            <div class="boder-dashed"></div>
+            <div class="my-Chose4" style="display: none;">
+                <div>
+                    <ul class="tree content-left_list-items">
+                        <li class="cb-size">
+                            <labe>
+                                <input class="cbsize" id="inputSize" type="number">
+                                <button class="cbbtn" id="clickSize">
+                                    <a class="cblink" href="#">Tìm Kiếm</a>
+                                </button>
+                            </labe>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="boder-dashed"></div>
+        </div>
+
+        <!--RIGHT-->
+        <div class="content-right">
+            <div class="slideshow-container"></div>
+            <div class="mySlides fade">
+                <img src="https://ananas.vn/wp-content/uploads/desktop_productlist.jpg" alt="" style="width: 100%; height: 350px;">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://ananas.vn/wp-content/uploads/LowHigh_Desktop-1920x1050.jpg" alt="" style="width: 100%; height: 350px;">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://ananas.vn/wp-content/uploads/shoes-anatomy-thumbnail.jpg" alt="" style="width: 100%; height: 350px;">
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+            <div class="product">
+                <div class="product-item">
+                    <img src="https://ananas.vn/wp-content/uploads/Pro_AV00098_2-500x500.jpg" alt="" style="width: 100%;">
+                    <div class="info-item">
+                        <div class="shoes-name_size">
+                            <a href="#" class="shoes-name">Basas Bumper Gum EXT NE - Low Top</a>
+                        </div>
+                        <p class="shoes-material">Black/Gum</p>
+                        <h2 class="shoes-price">580.000 VND</h2>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="https://ananas.vn/wp-content/uploads/Pro_AV00070_1.jpg" alt="" style="width: 100%;">
+                    <div class="info-item">
+                        <div class="shoes-name_size">
+                            <a href="#" class="shoes-name">Basas Bumper Gum NE - Low Top</a>
+                        </div>
+                        <p class="shoes-material">Black/Gum</p>
+                        <h2 class="shoes-price">520.000 VND</h2>
+                    </div>
+                </div>
+                <div class="product-item_last">
+                    <img src="https://ananas.vn/wp-content/uploads/pro_track6_A6T001_2-500x500.jpg" alt="" style="width: 100%;">
+                    <div class="info-item">
+                        <div class="shoes-name_size">
+                            <a href="#" class="shoes-name">Track 6 OG - Low Top</a>
+                        </div>
+                        <p class="shoes-material">70s White</p>
+                        <h2 class="shoes-price">990.000 VND</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-item">
+                    <img src="https://ananas.vn/wp-content/uploads/pro_AV00114_2-500x500.jpg" alt="" style="width: 100%;">
+                    <div class="info-item">
+                        <div class="shoes-name_size">
+                            <a href="#" class="shoes-name">Basas Bumper Gum EXT NE - Low Top</a>
+                        </div>
+                        <p class="shoes-material">OffWhite/Gum</p>
+                        <h2 class="shoes-price">580.000 VND</h2>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="https://ananas.vn/wp-content/uploads/pro_A61089_1_1-500x500.jpg" alt="" style="width: 100%;">
+                    <div class="info-item">
+                        <div class="shoes-name_size">
+                            <a href="#" class="shoes-name">URBAS CORLURAY - LOW TOP - DEEP GREEN</a>
+                        </div>
+                        <p class="shoes-material">Deep Green</p>
+                        <h2 class="shoes-price">590.000 VND</h2>
+                    </div>
+                </div>
+                <div class="product-item_last">
+                    <img src="https://ananas.vn/wp-content/uploads/pro_A6T005_2-500x500.jpg" alt="" style="width: 100%;">
+                    <div class="info-item">
+                        <div class="shoes-name_size">
+                            <a href="#" class="shoes-name">TRACK 6 SUEDE MOONPHASE - LOW TOP</a>
+                        </div>
+                        <p class="shoes-material">Grey Pepple</p>
+                        <h2 class="shoes-price">990.000 VND</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <div class="column">
+            <div class="row">
+                <img class="img-footer"  src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/Store.svg" alt="">
+                    <button class="find-store">
+                        <p class="text-findStore">Tìm cửa hàng</p>
+                    </button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="row">
+                <div class="product">Sản Phẩm </div>
+                <ul class="product-list">
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Giày Nam</a></li>
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Giày Nữ</a></li>
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Thời Trang & Phụ Kiện</a></li>
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Sale - Off</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="row">
+                <div class="product">Về Công Ty</div>
+                <ul class="product-list">
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Dứa Tuyển Dụng</a></li>
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Liên hệ nhượng quyền</a></li>
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Về Ananas</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="row">
+                <div class="product">Hỗ Trợ</div>
+                <ul class="product-list">
+                    <li class="product-list-item"><a class="product-list-item-link" href="">FAQs</a></li>
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Bảo mật thông tin</a></li>
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Chính sách chung</a></li>
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Tra cứu đơn hàng</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="row">
+                <div class="product">Liên Hệ</div>
+                <ul class="product-list">
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Email góp ý</a></li>
+                    <li class="product-list-item"><a class="product-list-item-link" href="">Hotline</a></li>
+                    <li class="product-list-item"><a class="product-list-item-link" href="">0793 185 167</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column"></div>
+        <div class="column">
+            <div class="row">
+                <div class="product">ANANAS SOCIAL</div>
+                <div class="product-social">
+                    <a class="product-social-link" href=""><i class="product-social-icon fa-brands fa-facebook"></i></a>
+                    <a class="product-social-link" href=""><i class="product-social-icon fa-brands fa-instagram"></i></a>
+                    <a class="product-social-link" href=""><i class="product-social-icon fa-solid fa-at"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="row">
+                <div class="product">Đăng ký Mail</div>
+                <div class="product-input">
+                    <input class="product-input-item" type="text">
+                    <a class="product-input-btn" href=""><p class="btn-send">SEND</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
